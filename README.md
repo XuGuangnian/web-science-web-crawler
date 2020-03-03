@@ -1,34 +1,16 @@
-twitter-to-mongo
+Web Science Twitter Crawler
 ================
 
-A python script that uses the Tweepy library to pull Tweets with specific keywords from Twitter's Streaming API, and then stores the important fields from the Tweet in a MongoDB collection.
+ This is for the source code for my solution the Web Sciences (H) COMPSCI4077 coursework Network based Social Media Analytics
+ 
+get_tweet_data.py
+================
 
-What gets stored in MongoDB?
-----------------------------
-  - The tweet ID
-  - The username of the tweet author
-  - The follower count of the tweet author
-  - The full body of the tweet
-  - Any hashtags used in the tweet
-  - The timestamp of the tweet's creation
-  - The language of the tweet
+This script is for fetching fetching data from twitter using keywords specified by the 'keywords' variable
+- Data is stored on a local mongoDB database
 
-Dependencies:
--------------
-  - Tweepy
-  - Pymongo
-  - MongoDB
+print_database.py
+================
 
-5 minute setup (Assumes the dependencies are already installed):
-------------------
-  - Have MongoDB installed on localhost, and create a database called TwitterStream
-  - Open the script and add the keywords or hashtags you want to track to the "keywords" variable
-  - Save it to your project folder or any easy to access folder
-  - Open your console and cd to the folder that you just put the script in
-  - Type the command $ python YOURSCRIPTNAME.py
-  - Watch as tweets hit the console in realtime, all while being stored in your database
-  
-Extras:
--------
-  - I made the comments in the script fairly detailed, so you should be able to see exactly what is going on and change the fields that are stored and such fairly easily.
-  - This is my first complete script I have ever written, so I apologize if there are some obvious errors or silly lines.
+This script is for the intial cleaning up of the database and outputs a csv file containing frequent words found in tweets
+- Data is outputed to output.csv
